@@ -63,7 +63,7 @@ function Footer() {
 
             <div className="footer-contact-row-cell">
               <Phone size={16} className="contact-meta-vector" />
-              <p className="contact-hotline-text">+92 300 1234567</p>
+              <p className="contact-hotline-text">+92 3339282833</p>
             </div>
 
           </div>

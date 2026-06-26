@@ -134,7 +134,7 @@ function PropertyDetail() {
                 </div>
                 <div className="seller-profile-row">
                   <span className="row-meta-label">Contact Hotline</span>
-                  <p className="row-meta-value accent-phone">03XX-XXXXXXX</p>
+                  <p className="row-meta-value accent-phone">03339914148</p>
                 </div>
                 <div className="seller-profile-row">
                   <span className="row-meta-label">Market Credentials</span>
@@ -161,9 +161,9 @@ function PropertyDetail() {
                 Cross-reference zoning coordinates regulations with Peshawar Development Authority indices maps databases.
               </p>
               <a 
-                href="https://www.pda.gkp.pk" 
-                target="_blank" 
-                rel="noreferrer" 
+                href="https://share.google/GjGlroNFnEJy36Jvq"
+                target="_blank"
+                rel="noreferrer"
                 className="pda-portal-external-link"
               >
                 Launch Live PDA Registry Check
