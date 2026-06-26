@@ -1,0 +1,202 @@
+/* Portal page layout canvas structure context wrapper */
+.premium-inquiries-canvas {
+  background-color: #fcfbf7;
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 4.5rem);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Master content dashboard panel module shell */
+.inquiries-card-container {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  padding: 3rem;
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(3, 72, 77, 0.02);
+  box-sizing: border-box;
+}
+
+/* Header Top Architecture rules */
+.inquiries-header-zone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.inquiries-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.inquiries-icon-badge {
+  width: 46px;
+  height: 46px;
+  background-color: rgba(3, 72, 77, 0.06);
+  color: #03484d; /* Brand Teal Icon Setup */
+  border-radius: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.inquiries-header-zone h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #03484d;
+  margin: 0 0 0.25rem 0;
+}
+
+.gold-highlight {
+  color: #eab308; /* Brand Gold text accent highlight */
+}
+
+.inquiries-header-zone p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Counter badge indicator box rules */
+.inquiries-counter-tag {
+  background-color: rgba(234, 179, 8, 0.1);
+  color: #b45309;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  white-space: nowrap;
+}
+
+.inquiries-divider-line {
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+/* INQUIRY ROW MATRIX ENGINE (STRICT HORIZONTAL ROW FLEX) */
+.inquiries-stack-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.inquiry-row-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inquiry-row-item:hover {
+  border-color: #03484d;
+  box-shadow: 0 4px 12px rgba(3, 72, 77, 0.02);
+}
+
+/* Micro columns allocation rules blocks */
+.inquiry-meta-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+/* Dynamic width adjustments for cleaner alignment grid */
+.block-user { flex: 1; min-width: 120px; }
+.block-property { flex: 1.5; min-width: 160px; }
+.block-phone { flex: 1; min-width: 120px; }
+.block-message { flex: 2.5; min-width: 220px; }
+
+.meta-label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.meta-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.meta-value-message {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #475569;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Response Trigger layout actions config */
+.inquiry-action-block {
+  display: flex;
+  align-items: center;
+}
+
+.inquiry-respond-btn {
+  background-color: #03484d;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.inquiry-respond-btn:hover {
+  background-color: #023539;
+  color: #eab308; /* Brand Gold hover toggle swap */
+}
+
+/* ==========================================================================
+   FLUID VIEWPORT OVERRIDES
+   ========================================================================== */
+@media (max-width: 992px) {
+  .inquiry-row-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 2rem;
+  }
+  .inquiry-meta-block {
+    width: 100%;
+    border-bottom: 1px dashed #e2e8f0;
+    padding-bottom: 0.75rem;
+  }
+  .block-message { border-bottom: none; }
+  .inquiry-action-block { width: 100%; margin-top: 0.5rem; }
+  .inquiry-respond-btn { width: 100%; padding: 0.85rem; }
+}
+
+@media (max-width: 640px) {
+  .inquiries-header-zone { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .inquiries-card-container { padding: 1.75rem; }
+}

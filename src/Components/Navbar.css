@@ -1,0 +1,176 @@
+/* Base Container Framework */
+.premium-navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.nav-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.5rem;
+}
+
+/* ==========================================================================
+   LOGO ENGINE SYSTEM (FIXED VISIBILITY)
+   ========================================================================== */
+.nav-logo-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.logo-icon-box {
+  background-color: #03484d; /* Main Website Teal */
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  display: inline-block !important; /* Forces layout rendering */
+  visibility: visible !important;   /* Fixes overlapping layer issues */
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #03484d !important;        /* Strict Website Theme Palette link */
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+/* Desktop Navigation Controls */
+.desktop-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-link:hover, .active-link {
+  color: #03484d;
+}
+
+/* Auth Profile Trigger Layout */
+.desktop-auth {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.account-btn {
+  background-color: #03484d;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.55rem 1.25rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.account-btn:hover {
+  background-color: #023539;
+  color: #eab308; /* Brand Gold text swap on hover */
+}
+
+/* Mobile Responsive Toggle Block */
+.mobile-toggle-zone {
+  display: none;
+}
+
+.menu-toggle-btn {
+  background: transparent;
+  border: none;
+  color: #03484d;
+  cursor: pointer;
+}
+
+/* Mobile Dropdown Menu Canvas */
+.mobile-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-top: 1px solid #f1f5f9;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-link {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.mobile-divider {
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 0.5rem 0;
+}
+
+.mobile-auth-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.mobile-auth-login {
+  text-align: center;
+  padding: 0.6rem;
+  border: 1px solid #03484d;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #03484d;
+  font-weight: 700;
+}
+
+.mobile-auth-signup {
+  text-align: center;
+  padding: 0.6rem;
+  background-color: #03484d;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.mobile-account-btn {
+  text-align: center;
+  padding: 0.75rem;
+  background-color: #eab308;
+  color: #0f172a;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+/* Media Query Responsive Scale Viewports */
+@media (max-width: 868px) {
+  .desktop-links, .desktop-auth {
+    display: none;
+  }
+  .mobile-toggle-zone {
+    display: block;
+  }
+}

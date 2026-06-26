@@ -1,0 +1,294 @@
+/* Core background layer canvas specs */
+.premium-listings-canvas {
+  background-color: #fcfbf7;
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 4.5rem);
+  width: 100%;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.listings-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ==========================================================================
+   TOP CONTROL ACTIONS DASHBOARD HEADER
+   ========================================================================== */
+.listings-dashboard-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.listings-main-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #03484d; /* Brand Teal */
+  margin: 0 0 0.35rem 0;
+  letter-spacing: -0.01em;
+}
+
+.gold-highlight {
+  color: #eab308; /* Brand Gold */
+}
+
+.listings-subtitle {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.add-listing-trigger-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #03484d;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(3, 72, 77, 0.15);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.add-listing-trigger-btn:hover {
+  background-color: #023539;
+  color: #eab308;
+}
+
+.listings-title-divider {
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 2.5rem 0;
+  width: 100%;
+}
+
+/* ==========================================================================
+   EMPTY STATE INVENTORY HANDLING
+   ========================================================================== */
+.empty-listings-state-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  padding: 5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(3, 72, 77, 0.01);
+}
+
+.empty-building-icon {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.empty-listings-state-box h3 {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.empty-listings-state-box p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0 0 2rem 0;
+}
+
+.empty-state-cta {
+  background-color: #03484d;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.85rem 2rem;
+  border-radius: 2rem;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   STRICT 3-COLUMN HORIZONTAL GRID CONFIGURATION
+   ========================================================================== */
+.listings-grid-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.grid-layout-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.premium-listings-grid-matrix {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Clean 3 items side-by-side */
+  gap: 2rem;
+  width: 100%;
+}
+
+.premium-listing-item-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Thumbnail and Status Badge overlays styles */
+.card-image-thumbnail-frame {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  background-color: #e2e8f0;
+}
+
+.card-img-core {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status-badge-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.725rem;
+  font-weight: 800;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.status-badge-tag.active { background-color: #dcfce7; color: #15803d; }
+.status-badge-tag.pending { background-color: #fefce8; color: #a16207; }
+
+/* Text Blocks & Values Specs */
+.card-text-details-zone {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-listing-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+}
+
+.card-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.card-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.teal-icon-accent {
+  color: #03484d;
+}
+
+.card-price-row-divider {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.price-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+}
+
+.price-tag-value {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #03484d;
+  margin: 0.15rem 0 0 0;
+}
+
+/* INLINE CORE CONTROLS ROW BUTTONS ENGINE */
+.card-control-actions-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: auto; /* Pushes button row strictly to bottom of card bounds */
+}
+
+.card-control-actions-row button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border: none;
+  padding: 0.65rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.control-btn-edit {
+  background-color: rgba(3, 72, 77, 0.06);
+  color: #03484d;
+}
+
+.control-btn-edit:hover {
+  background-color: #03484d;
+  color: #ffffff;
+}
+
+.control-btn-delete {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+
+.control-btn-delete:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   VIEWPORT RESPONSIVE ENGINE MEDIA BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .premium-listings-grid-matrix { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .listings-dashboard-header { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+  .add-listing-trigger-btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 640px) {
+  .premium-listings-grid-matrix { grid-template-columns: 1fr; }
+}

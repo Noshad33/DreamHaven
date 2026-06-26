@@ -1,0 +1,198 @@
+/* Core viewport padding and container bounds */
+.properties-page-container {
+  background-color: #fcfbf7; /* Premium warm background */
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 4.5rem);
+  width: 100%;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.properties-header-section {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.properties-main-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #03484d; /* Brand Teal */
+  margin: 0 0 0.5rem 0;
+}
+
+.gold-highlight {
+  color: #eab308; /* Brand Gold */
+}
+
+.properties-subtitle {
+  color: #64748b;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.properties-gold-divider {
+  height: 3px;
+  width: 3.5rem;
+  background-color: #eab308;
+  margin: 1.25rem auto 0 auto;
+}
+
+/* ==========================================================================
+   ADVANCED FILTER CONTROLS BAR STYLE
+   ========================================================================== */
+.premium-filter-bar-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 10px 25px rgba(3, 72, 77, 0.02);
+  box-sizing: border-box;
+}
+
+.filter-bar-grid-system {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr auto; /* Clean balanced widths row distribution */
+  gap: 1.25rem;
+  align-items: flex-end;
+}
+
+.filter-input-element {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-input-element label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.filter-search-field, 
+.filter-dropdown-selector {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  color: #0f172a;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  height: 44px;
+}
+
+.filter-search-field:focus, 
+.filter-dropdown-selector:focus {
+  border-color: #03484d;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(3, 72, 77, 0.05);
+}
+
+.filter-action-block {
+  display: flex;
+  align-items: center;
+  height: 44px;
+}
+
+.filter-clear-trigger {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.filter-clear-trigger:hover {
+  background-color: #fef2f2;
+}
+
+/* Results Counter element */
+.filter-results-counter {
+  max-width: 1200px;
+  margin: 0 auto 1.5rem auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   MATRIX CARDS GRID ENGINE
+   ========================================================================== */
+.properties-horizontal-row {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.premium-properties-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Balanced layout dynamic items */
+  gap: 2rem;
+  width: 100%;
+}
+
+/* No data conditional box */
+.properties-no-data {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+}
+
+.no-data-icon {
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+}
+
+.properties-no-data h3 {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.properties-no-data p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ==========================================================================
+   MEDIA QUERY VIEWPORT RESPONSIVENESS
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .premium-properties-matrix-grid { grid-template-columns: repeat(2, 1fr); }
+  .filter-bar-grid-system { grid-template-columns: 1fr 1fr; }
+  .filter-action-block { grid-column: span 2; justify-content: center; width: 100%; }
+  .filter-clear-trigger { width: 100%; text-align: center; background-color: #fef2f2; }
+}
+
+@media (max-width: 640px) {
+  .premium-properties-matrix-grid { grid-template-columns: 1fr; }
+  .filter-bar-grid-system { grid-template-columns: 1fr; }
+  .filter-action-block { grid-column: span 1; }
+  .properties-page-container { padding: 3rem 1rem; }
+  .properties-main-title { font-size: 2rem; }
+}

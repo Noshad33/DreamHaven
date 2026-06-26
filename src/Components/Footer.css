@@ -1,0 +1,201 @@
+/* Core Structural Matrix Layout for the Platform Footer */
+.premium-master-footer {
+  background-color: #022b2e; /* Deep corporate dark Teal tone foundation */
+  color: #e2e8f0;
+  padding: 4.5rem 2rem 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 4px solid #eab308; /* Brand Gold top highlight rim */
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.footer-structural-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr; /* Distinct functional width distribution */
+  gap: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+/* ==========================================================================
+   BRAND AND PROSE ARCHITECTURE COLUMN
+   ========================================================================== */
+.footer-brand-column-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-brand-vector-icon {
+  color: #eab308; /* Brand Gold focus vector */
+}
+
+.footer-brand-logo-row h2 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.gold-text-accent {
+  color: #eab308;
+}
+
+.footer-brand-line-accent {
+  height: 2px;
+  width: 2rem;
+  background-color: #eab308;
+  margin: 1rem 0 1.25rem 0;
+}
+
+.footer-brand-prose-description {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   NAVIGATION PIPELINE LINK SYSTEMS
+   ========================================================================== */
+.footer-links-column-section h3,
+.footer-contact-column-section h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-navigation-vertical-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer-navigation-vertical-links li a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+}
+
+.link-hover-arrow {
+  opacity: 0;
+  transform: translate(-3px, 3px);
+  transition: all 0.2s ease;
+  color: #eab308;
+}
+
+/* Hover system tracking states overrides */
+.footer-navigation-vertical-links li a:hover {
+  color: #ffffff;
+}
+
+.footer-navigation-vertical-links li a:hover .link-hover-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* ==========================================================================
+   OFFICE REGISTRY RADAR CONTACT MODULES
+   ========================================================================== */
+.footer-contact-rows-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-contact-row-cell {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.contact-meta-vector {
+  color: #eab308;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.footer-contact-row-cell p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+.footer-contact-row-cell .contact-hotline-text {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   HORIZONTAL COPYRIGHT BASE STRIP LINING
+   ========================================================================== */
+.footer-copyright-horizontal-strip {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.copyright-inner-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-copyright-horizontal-strip p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+  font-weight: 600;
+}
+
+.pda-compliance-tag-footer {
+  color: #eab308 !important; /* Forces distinct prominence on governmental verification rules info */
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT CONSTRAINTS CONFIGURATIONS
+   ========================================================================== */
+@media (max-width: 912px) {
+  .footer-structural-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .footer-copyright-horizontal-strip {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .premium-master-footer {
+    padding: 3rem 1rem 0 1rem;
+  }
+  .copyright-inner-wrapper {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}

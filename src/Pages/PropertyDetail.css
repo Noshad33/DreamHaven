@@ -1,0 +1,429 @@
+/* Core viewport canvas layers setup wrapping matching systems */
+.premium-detail-canvas {
+  background-color: #fcfbf7;
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 4.5rem);
+  width: 100%;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.detail-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.detail-nav-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s;
+}
+
+.detail-nav-back-link:hover {
+  color: #03484d; /* Brand Teal Focus */
+}
+
+/* ==========================================================================
+   HERO HEADS MEDIA HOOD STYLING
+   ========================================================================== */
+.detail-hero-frame {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  margin-bottom: 2.5rem;
+  background-color: #cbd5e1;
+}
+
+.detail-core-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-hero-overlay-shadow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(3, 72, 77, 0.8) 0%, rgba(3, 72, 77, 0.2) 60%, transparent 100%);
+}
+
+.detail-hero-caption-stack {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 2.5rem;
+  right: 2.5rem;
+  z-index: 2;
+}
+
+.detail-type-badge {
+  background-color: #eab308; /* Brand Gold Badge */
+  color: #03484d;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.detail-master-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   DUAL INTERLINKING COLUMNS DISTRIBUTION ARCHITECTURE
+   ========================================================================== */
+.detail-dual-layout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2/3 Main Body Content, 1/3 Floating Sidebar widgets */
+  gap: 2.5rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* LEFT SIDE FLOW COMPACT PACKING */
+.detail-main-info-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.detail-pricing-header-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 15px rgba(3, 72, 77, 0.01);
+}
+
+.price-micro-label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.price-display-value {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #03484d; /* Brand Teal primary dynamic marker text */
+  margin: 0.25rem 0 0 0;
+}
+
+/* SPECS MATRIX HOVER SECTIONS */
+.detail-matrix-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.spec-feature-cell {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.spec-icon-badge {
+  width: 42px;
+  height: 42px;
+  background-color: rgba(3, 72, 77, 0.05);
+  color: #03484d;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.spec-cell-text label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+}
+
+.spec-cell-text p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0.15rem 0 0 0;
+}
+
+/* TEXT PROSE DESCRIPTION SHIELD BOX */
+.detail-description-block-shield {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.005);
+}
+
+.detail-description-block-shield h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #03484d;
+  margin: 0 0 0.5rem 0;
+}
+
+.small-gold-bar-accent {
+  height: 2px;
+  width: 2rem;
+  background-color: #eab308;
+  margin-bottom: 1.25rem;
+}
+
+.description-prose-text {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ==========================================================================
+   RIGHT SIDEBAR UTILITY WIDGET STACKS ELEMENTS
+   ========================================================================== */
+.detail-side-widgets-sticky {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: sticky;
+  top: 2rem;
+}
+
+.widget-premium-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  box-shadow: 0 4px 20px rgba(3, 72, 77, 0.01);
+  box-sizing: border-box;
+}
+
+.widget-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.teal-widget-icon { color: #03484d; }
+.gold-widget-icon { color: #eab308; }
+
+.widget-card-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.widget-divider-line {
+  height: 1px;
+  background-color: #f1f5f9;
+  margin: 1.25rem 0;
+}
+
+/* SELLER PROSE METRIC FACTOR SHEETS */
+.seller-profile-rows-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.seller-profile-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.row-meta-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.row-meta-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #334155;
+  margin: 0;
+}
+
+.row-meta-value.accent-phone {
+  color: #03484d;
+  font-size: 1.05rem;
+}
+
+.widget-contact-trigger-btn {
+  width: 100%;
+  background-color: #03484d;
+  color: #ffffff;
+  border: none;
+  padding: 0.85rem;
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.widget-contact-trigger-btn:hover {
+  background-color: #023539;
+  color: #eab308;
+}
+
+/* PDA Verification styling variations */
+.block-pda-shield {
+  background-color: rgba(3, 72, 77, 0.02);
+  border: 1px dashed #03484d;
+}
+
+.pda-compliance-explainer {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.pda-portal-external-link {
+  display: block;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #03484d;
+  color: #03484d;
+  text-decoration: none;
+  padding: 0.8rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.pda-portal-external-link:hover {
+  background-color: #03484d;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   BOTTOM RECOMMENDATIONS SIMILAR PROPERTIES MATRIX SHELF
+   ========================================================================== */
+.detail-recommendations-shelf-section {
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.shelf-header-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.shelf-header-row h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #03484d;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.shelf-horizontal-line {
+  height: 1px;
+  background-color: #e2e8f0;
+  flex: 1;
+}
+
+.premium-shelf-horizontal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Balanced layout dynamic structures columns */
+  gap: 2rem;
+  width: 100%;
+}
+
+.shelf-card-motion-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.shelf-card-motion-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+/* NOT FOUND BACKDROP WRAPPERS RULES SCREENING */
+.detail-not-found-canvas {
+  background-color: #fcfbf7;
+  min-height: calc(100vh - 4.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.not-found-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 460px;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.01);
+}
+
+.not-found-box h2 { color: #03484d; margin: 0 0 0.5rem 0; font-weight: 800; }
+.not-found-box p { color: #64748b; font-size: 0.95rem; margin: 0 0 2rem 0; line-height: 1.5; }
+
+.back-inventory-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #03484d;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   RESPONSIVE FLUID MEDIA RECONSTRUCTIONS OVERRIDES
+   ========================================================================== */
+@media (max-width: 992px) {
+  .detail-dual-layout-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .detail-side-widgets-sticky { position: static; }
+  .premium-shelf-horizontal-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .detail-hero-frame { height: 300px; }
+  .detail-master-title { font-size: 1.75rem; }
+  .detail-hero-caption-stack { bottom: 1.5rem; left: 1.5rem; right: 1.5rem; }
+  .detail-matrix-specs-grid { grid-template-columns: 1fr; }
+  .premium-shelf-horizontal-grid { grid-template-columns: 1fr; }
+  .premium-detail-canvas { padding: 2rem 1rem; }
+}

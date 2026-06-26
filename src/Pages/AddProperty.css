@@ -1,0 +1,146 @@
+/* Warm background wrapper layout context */
+.add-property-page-wrapper {
+  background-color: #fcfbf7;
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 4.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Dashboard styled unified white card block wrapper */
+.form-card-container {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  padding: 3.5rem;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(3, 72, 77, 0.04);
+  box-sizing: border-box;
+}
+
+/* Form Top Section Headers */
+.form-header-zone {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.form-header-zone h1 {
+  font-size: 2.5rem;
+  color: #03484d; /* Brand Teal */
+  margin: 0 0 0.5rem 0;
+  font-weight: 800;
+}
+
+.gold-highlight {
+  color: #eab308; /* Brand Gold */
+}
+
+.form-header-zone p {
+  color: #64748b;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.form-title-divider {
+  height: 2px;
+  width: 3.5rem;
+  background-color: #eab308;
+  margin: 1.25rem auto 0 auto;
+}
+
+/* STRICT HORIZONTAL ROW FLEX ARCHITECTURE */
+.premium-property-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-input-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Individual label input structural box */
+.input-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1; /* Forces pair blocks to distribute identically */
+}
+
+.full-width-field {
+  width: 100%;
+}
+
+/* Labels custom tracking details */
+.input-field-group label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #334155;
+  letter-spacing: 0.02em;
+}
+
+/* Modern Input boxes styling engine fields */
+.input-field-group input,
+.input-field-group select,
+.input-field-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  color: #0f172a;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.input-field-group input:focus,
+.input-field-group select:focus,
+.input-field-group textarea:focus {
+  border-color: #03484d;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(3, 72, 77, 0.06);
+}
+
+.input-field-group textarea {
+  resize: vertical;
+}
+
+/* Action Trigger Button Row Customizers */
+.form-action-row {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.submit-property-btn {
+  width: 100%;
+  background-color: #03484d;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.submit-property-btn:hover {
+  background-color: #023539;
+  color: #eab308; /* Brand Gold text accent inversion on hover */
+}
+
+/* Responsive Scaling Breakpoints operations */
+@media (max-width: 768px) {
+  .form-card-container { padding: 2rem; }
+  .form-input-row { flex-direction: column; gap: 1.5rem; }
+}

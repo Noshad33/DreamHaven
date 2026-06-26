@@ -1,0 +1,280 @@
+/* Warm cream theme background canvas sync */
+.premium-about-page {
+  background-color: #fcfbf7;
+  color: #0f172a;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* ==========================================================================
+   HERO BLOCK STYLING
+   ========================================================================== */
+.about-hero-section {
+  text-align: center;
+  padding: 5rem 1.5rem 3.5rem 1.5rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.about-hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #03484d; /* Brand Teal */
+  margin: 0 0 0.5rem 0;
+}
+
+.gold-highlight {
+  color: #eab308; /* Brand Gold */
+}
+
+.about-hero-subtitle {
+  font-size: 1.15rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.about-gold-divider {
+  height: 2px;
+  width: 4rem;
+  background-color: #eab308;
+  margin: 1.5rem auto 0 auto;
+}
+
+/* ==========================================================================
+   STORY BLOCK (HORIZONTAL SPLIT)
+   ========================================================================== */
+.about-story-section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.story-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.story-image-box {
+  flex: 1;
+  height: 380px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(3, 72, 77, 0.06);
+}
+
+.story-real-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-content-box {
+  flex: 1;
+}
+
+.story-content-box h2 {
+  font-size: 2.25rem;
+  color: #0f172a;
+  margin: 0 0 1.5rem 0;
+  font-weight: 700;
+}
+
+.story-content-box p {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.7;
+  margin: 0 0 1.25rem 0;
+}
+
+/* ==========================================================================
+   MISSION VISION (STRICT HORIZONTAL 2-COLUMNS)
+   ========================================================================== */
+.about-mv-row {
+  max-width: 1200px;
+  margin: 0 auto 5rem auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.mv-card-block {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.mv-accent-tag {
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(3, 72, 77, 0.04);
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+.mv-card-block h2 {
+  font-size: 1.75rem;
+  color: #03484d;
+  margin: 0 0 1rem 0;
+}
+
+.mv-card-block p {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   FEATURES MATRIX (STRICT HORIZONTAL 4-COLUMNS)
+   ========================================================================== */
+.about-features-section {
+  background-color: #ffffff;
+  padding: 5rem 2rem;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.features-main-heading {
+  text-align: center;
+  font-size: 2.25rem;
+  color: #0f172a;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+.features-horizontal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 Columns array horizontally */
+  gap: 2rem;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.about-feature-card {
+  background-color: #fcfbf7;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.about-feature-card:hover {
+  transform: translateY(-5px);
+  border-color: #03484d;
+}
+
+.feature-icon-circle {
+  width: 55px;
+  height: 55px;
+  background-color: #03484d;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+  box-shadow: 0 4px 12px rgba(3, 72, 77, 0.15);
+}
+
+.about-feature-card h3 {
+  font-size: 1.15rem;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.about-feature-card p {
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   STATS BAR (STRICT HORIZONTAL 3-COLUMNS)
+   ========================================================================== */
+.about-stats-strip {
+  max-width: 1100px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.about-stat-box h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #03484d;
+  margin: 0 0 0.25rem 0;
+}
+
+.about-stat-box p {
+  font-size: 1.1rem;
+  color: #eab308;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ==========================================================================
+   CTA STRIP ACTION
+   ========================================================================== */
+.about-cta-banner {
+  background-color: #03484d;
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.about-cta-banner h2 {
+  font-size: 2.25rem;
+  margin: 0 0 2rem 0;
+  font-weight: 700;
+}
+
+.about-cta-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #eab308;
+  color: #0f172a;
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.about-cta-link-btn:hover {
+  background-color: #f59e0b;
+  transform: scale(1.03);
+}
+
+/* ==========================================================================
+   MEDIA RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .story-container { flex-direction: column; gap: 2rem; }
+  .features-horizontal-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-mv-row { flex-direction: column; }
+}
+
+@media (max-width: 640px) {
+  .features-horizontal-grid { grid-template-columns: 1fr; }
+  .about-stats-strip { flex-direction: column; gap: 3rem; }
+  .about-hero-title { font-size: 2.25rem; }
+}

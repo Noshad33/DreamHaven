@@ -1,0 +1,166 @@
+/* Dashboard context background canvas framework */
+.premium-seller-query-wrapper {
+  background-color: #fcfbf7;
+  padding: 5rem 2rem;
+  min-height: calc(100vh - 4.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Premium micro-form layout module wrapper */
+.seller-query-card-container {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  padding: 3.5rem;
+  max-width: 750px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(3, 72, 77, 0.03);
+  box-sizing: border-box;
+}
+
+/* Top Branding Elements */
+.query-header-zone {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.query-icon-badge {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(3, 72, 77, 0.06);
+  color: #03484d; /* Brand Teal Icon Accent */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.query-header-zone h1 {
+  font-size: 2.25rem;
+  color: #03484d;
+  margin: 0 0 0.5rem 0;
+  font-weight: 800;
+}
+
+.gold-highlight {
+  color: #eab308; /* Brand Gold text swap */
+}
+
+.query-header-zone p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+  max-width: 480px;
+  line-height: 1.5;
+}
+
+.query-title-divider {
+  height: 2px;
+  width: 3rem;
+  background-color: #eab308;
+  margin-top: 1.25rem;
+}
+
+/* FORM LAYOUT SYSTEM FLOWS */
+.premium-seller-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* STRICT HORIZONTAL GRID FIELDS PAIR */
+.query-form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.query-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1; /* Retains matching widths side-by-side */
+}
+
+.full-width-query-field {
+  width: 100%;
+}
+
+.query-input-group label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #334155;
+  letter-spacing: 0.01em;
+}
+
+/* Input core components skinning styling elements */
+.query-input-group input,
+.query-input-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  color: #0f172a;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.query-input-group input:focus,
+.query-input-group textarea:focus {
+  border-color: #03484d;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(3, 72, 77, 0.06);
+}
+
+.query-input-group textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* Action button configurations row */
+.query-action-row {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.submit-query-btn {
+  width: 100%;
+  background-color: #03484d;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.submit-query-btn:hover {
+  background-color: #023539;
+  color: #eab308; /* Brand Gold layout text accent inversion on hover */
+}
+
+/* Responsive Fluid Viewport controls scaling */
+@media (max-width: 640px) {
+  .seller-query-card-container { padding: 2rem 1.5rem; }
+  .query-form-row { flex-direction: column; gap: 1.5rem; }
+  .query-header-zone h1 { font-size: 1.85rem; }
+}

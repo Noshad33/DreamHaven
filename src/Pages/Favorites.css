@@ -1,0 +1,181 @@
+/* Page background canvas integration matching client workspace */
+.premium-favorites-canvas {
+  background-color: #fcfbf7;
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 4.5rem);
+  width: 100%;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.favorites-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ==========================================================================
+   FAVORITES HEADER ARCHITECTURE
+   ========================================================================== */
+.favorites-dashboard-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.back-portal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  transition: color 0.2s;
+}
+
+.back-portal-link:hover {
+  color: #03484d;
+}
+
+.fav-main-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #03484d; /* Brand Teal */
+  margin: 0;
+}
+
+.gold-highlight {
+  color: #eab308; /* Brand Gold */
+}
+
+/* Active collection dynamic display counter */
+.fav-counter-badge-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem 1.25rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #334155;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+}
+
+.fav-title-divider {
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+/* ==========================================================================
+   EMPTY STATE LOOK & FEEL
+   ========================================================================== */
+.empty-favorites-card-zone {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  padding: 5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(3, 72, 77, 0.02);
+}
+
+.empty-heart-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #fef2f2;
+  color: #ef4444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.empty-favorites-card-zone h3 {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.empty-favorites-card-zone p {
+  color: #64748b;
+  font-size: 1rem;
+  max-width: 450px;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+}
+
+.explore-properties-btn {
+  background-color: #03484d;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.85rem 2rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.explore-properties-btn:hover {
+  background-color: #023539;
+  transform: scale(1.02);
+}
+
+/* ==========================================================================
+   STRICT HORIZONTAL PROPERTY CARDS GRID MATRIX
+   ========================================================================== */
+.favorites-horizontal-grid-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.fav-grid-layout-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.premium-cards-grid-matrix {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Balanced horizontal card layout rows */
+  gap: 2rem;
+  width: 100%;
+}
+
+.fav-card-motion-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.fav-card-motion-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+/* ==========================================================================
+   VIEWPORT RESPONSIVE SYSTEM
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .premium-cards-grid-matrix { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 680px) {
+  .favorites-dashboard-header { flex-direction: column; align-items: flex-start; }
+  .fav-counter-badge-box { margin-top: 0.5rem; }
+  .premium-cards-grid-matrix { grid-template-columns: 1fr; }
+}
