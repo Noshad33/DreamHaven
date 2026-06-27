@@ -215,7 +215,7 @@ const AIPrediction = () => {
                 <div className="ai-output-metrics-card">
                   <div className="metric-card-top-accent"></div>
                   <div className="metric-row-header">
-                    <h4>Estimated Valuation</h4>
+                    <h4>Estimated Market Price</h4>
                     <span className="premium-pill">AI Engine Ver 2.4</span>
                   </div>
                   <div className="valuation-output-numeric-display">

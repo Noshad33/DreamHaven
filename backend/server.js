@@ -10,11 +10,12 @@ import userRoutes from "./routes/userRoutes.js";
 import resumeRoutes from "./routes/resumeRoutes.js";
 import analysisRoutes from "./routes/analysisRoutes.js";
 import dashboardRoutes from "./routes/dashboardRoutes.js";
+import predictionRoutes from "./routes/predictionRoutes.js";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
 dotenv.config();
 
-connectDB();
+// connectDB();
 
 const app = express();
 
@@ -67,6 +68,7 @@ app.get("/api", (_req, res) => {
         resume: "/api/resume",
         analysis: "/api/analysis",
         dashboard: "/api/dashboard",
+        predict: "/api/predict",
       },
     },
   });
@@ -77,6 +79,7 @@ app.use("/api/user", userRoutes);
 app.use("/api/resume", resumeRoutes);
 app.use("/api/analysis", analysisRoutes);
 app.use("/api/dashboard", dashboardRoutes);
+app.use("/api/predict", predictionRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
