@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Home } from "lucide-react";
+import { Menu, X, Home, Brain } from "lucide-react"; // Brain icon add kiya gaya hai
 import { auth } from "../auth";
-import "./Navbar.css"; // Aapki CSS file import ho rahi hai
+import "./Navbar.css"; 
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,6 +27,12 @@ function Navbar() {
             <Link to="/agents" className="nav-link">Agents</Link>
             <Link to="/about" className="nav-link">About</Link>
             <Link to="/contact" className="nav-link">Contact</Link>
+
+             {/* NEW AI PREDICTION LINK ADDED HERE */}
+            <Link to="/ai-prediction" className="nav-link" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+              <Brain size={16} style={{ color: "#d4af37" }} />
+              <span>AI Prediction</span>
+            </Link>
 
             {auth.role === "Buyer" && (
               <Link to="/favorites" className="nav-link buyer-link">Favorites</Link>
@@ -59,6 +65,13 @@ function Navbar() {
           <Link to="/" onClick={() => setIsMenuOpen(false)} className="mobile-link">Home</Link>
           <Link to="/properties" onClick={() => setIsMenuOpen(false)} className="mobile-link">Properties</Link>
           <Link to="/agents" onClick={() => setIsMenuOpen(false)} className="mobile-link">Agents</Link>
+          
+          {/* NEW AI PREDICTION MOBILE LINK ADDED HERE */}
+          <Link to="/ai-prediction" onClick={() => setIsMenuOpen(false)} className="mobile-link" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <Brain size={18} style={{ color: "#d4af37" }} />
+            <span>AI Prediction</span>
+          </Link>
+
           <Link to="/about" onClick={() => setIsMenuOpen(false)} className="mobile-link">About</Link>
           <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="mobile-link">Contact</Link>
 

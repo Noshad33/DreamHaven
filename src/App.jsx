@@ -19,7 +19,7 @@ import Favorites from "./Pages/Favorites";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import AdminRoute from "./Components/AdminRoute";
 import Footer from "./Components/Footer";
-
+import AIPrediction from "./Pages/AIPrediction";
 
 
 
@@ -48,6 +48,7 @@ function App() {
             <Route path="/dashboard" element={ <ProtectedRoute> <Dashboard /></ProtectedRoute>}/>
             {/* <Route path="/admin" element={<AdminRoute><Admin /></AdminRoute>}/> */}
             <Route path="/admin" element={<Admin />} />
+            <Route path="/ai-prediction" element={<AIPrediction />} />
             <Route path="/favorites" element={ <ProtectedRoute><Favorites /></ProtectedRoute>}/>
 
       </Routes>

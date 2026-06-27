@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Search, ArrowRight } from "lucide-react";
+import { useNavigate, Link } from "react-router-dom";
+import { Search, ArrowRight, Brain, Sparkles } from "lucide-react";
 import PropertyCard from "../Components/PropertyCard";
 import properties from "../data/properties";
 import "./Home.css";
@@ -8,28 +8,15 @@ import "./Home.css";
 function Home() {
   const navigate = useNavigate();
   
-  // Real estate standards ke mutabiq states ko align kiya hai
-  const [purposeTab, setPurposeTab] = useState("Sale"); // Default "Sale" (For Sale) ya "Rent" (For Rent)
+  const [purposeTab, setPurposeTab] = useState("Sale"); 
   const [location, setLocation] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = () => {
     const params = new URLSearchParams();
-    
-    // 1. Purpose Filter (Sale / Rent) hamesha pass hoga
     params.append("purpose", purposeTab);
-    
-    // 2. Location filter agar selected ho
-    if (location) {
-      params.append("location", location);
-    }
-    
-    // 3. Keyword / Title text search agar user ne kuch type kiya ho
-    if (searchQuery.trim() !== "") {
-      params.append("query", searchQuery.trim().toLowerCase());
-    }
-
-    // Final URL structure: /properties?purpose=Sale&location=Hayatabad&query=villa
+    if (location) params.append("location", location);
+    if (searchQuery.trim() !== "") params.append("query", searchQuery.trim().toLowerCase());
     navigate(`/properties?${params.toString()}`);
   };
 
@@ -49,7 +36,6 @@ function Home() {
 
         <div className="hero-container-fluid">
           <div className="hero-text-aligner">
-            
             <div className="peshawar-badge">
               <span>📍 Peshawar City</span>
             </div>
@@ -66,8 +52,6 @@ function Home() {
             {/* FLOATING PILL SEARCH CAPSULE */}
             <div className="floating-search-panel">
               <div className="search-inputs-box">
-                
-                {/* 1. Purpose Tabs (Sale vs Rent) */}
                 <div className="search-tabs-row">
                   <button 
                     type="button"
@@ -85,7 +69,6 @@ function Home() {
                   </button>
                 </div>
 
-                {/* 2. Text/Title Search Box */}
                 <div className="input-inner-field">
                   <Search size={18} className="field-decorative-icon" />
                   <input 
@@ -97,7 +80,6 @@ function Home() {
                   />
                 </div>
 
-                {/* 3. Location Dropdown */}
                 <div className="input-inner-field">
                   <select
                     value={location}
@@ -112,15 +94,12 @@ function Home() {
                   </select>
                 </div>
 
-                {/* 4. Action Trigger Button */}
                 <button type="button" className="luxury-search-trigger" onClick={handleSearch}>
                   <span>Search</span>
                   <ArrowRight size={16} />
                 </button>
-
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -133,18 +112,35 @@ function Home() {
           <div className="premium-divider-bar"></div>
         </div>
 
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "2rem",
-          width: "100%",
-          maxWidth: "1200px",
-          margin: "0 auto",
-          boxSizing: "border-box"
-        }}>
+        <div className="home-properties-grid-layout">
           {properties.slice(0, 6).map((item) => (
             <PropertyCard key={item.id} data={item} />
           ))}
+        </div>
+      </section>
+
+      {/* CLEAN & PREMIUM AI BANNER SECTION */}
+      <section className="ai-home-banner">
+        <div className="ai-banner-glow-effect" />
+        <div className="ai-banner-content">
+          <div className="ai-banner-badge">
+            <Sparkles size={14} className="animate-pulse" /> 
+            <span>Smart Machine Learning Module</span>
+          </div>
+          
+          <h2 className="ai-banner-title">
+            Predict Peshawar Property Prices Instantly With <span className="text-gold">AI Engine</span>
+          </h2>
+          
+          <p className="ai-banner-description">
+            Evaluate modern valuation estimations across prime sectors like Hayatabad, DHA Peshawar, and University Town using algorithmic structural data vectors.
+          </p>
+
+          <Link to="/ai-prediction" className="ai-banner-cta-btn">
+            <Brain size={18} />
+            <span>Launch AI Price Predictor</span>
+            <ArrowRight size={16} />
+          </Link>
         </div>
       </section>
 

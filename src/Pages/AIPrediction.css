@@ -1,0 +1,488 @@
+/* Core Layout Global Theme Parameters Variables definitions for DreamHaven project alignment */
+:root {
+  --primary-navy-deep: #0a192f;
+  --secondary-navy-bg: #0f223d;
+  --accent-gold-premium: #d4af37;
+  --accent-gold-hover: #f3e5ab;
+  --text-pure-white: #ffffff;
+  --text-muted-gray: #a0aec0;
+  --glassmorphism-border: rgba(212, 175, 55, 0.15);
+  --glassmorphism-bg: rgba(15, 34, 61, 0.7);
+}
+
+/* Wrapper and Structural Main Configuration layout definitions */
+.ai-prediction-wrapper {
+  background-color: var(--primary-navy-deep);
+  color: var(--text-pure-white);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  padding-bottom: 60px;
+}
+
+/* Premium High-End Gradient Hero Structural Section Stylings */
+.ai-hero-container {
+  position: relative;
+  background: linear-gradient(135deg, #0a192f 0%, #172a45 50%, #020c1b 100%);
+  padding: 100px 24px 80px 24px;
+  text-align: center;
+  border-bottom: 1px solid var(--glassmorphism-border);
+  overflow: hidden;
+}
+
+.ai-hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.ai-hero-content-box {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.ai-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--accent-gold-premium);
+  color: var(--accent-gold-premium);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.ai-badge-icon {
+  animation: spin 4s linear infinite;
+}
+
+.ai-hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.text-gold {
+  color: var(--accent-gold-premium);
+  background: linear-gradient(135deg, #fff 0%, var(--accent-gold-premium) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ai-hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted-gray);
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Feature Fluid Workspace Grid Structure Implementation styling */
+.ai-feature-layout {
+  max-width: 1280px;
+  margin: -40px auto 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 5;
+}
+
+.ai-grid-system {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Section A: Glassmorphism Computational User Entry Forms Panels styling */
+.ai-form-card-panel {
+  background: var(--glassmorphism-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glassmorphism-border);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.ai-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 35px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 16px;
+}
+
+.ai-panel-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.ai-responsive-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-input-row-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.form-input-row-triple {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.input-field-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-field-wrapper label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted-gray);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-field-wrapper select,
+.input-field-wrapper input {
+  background: rgba(10, 25, 47, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 14px 16px;
+  color: var(--text-pure-white);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  width: 100%;
+}
+
+.input-field-wrapper select:focus,
+.input-field-wrapper input:focus {
+  border-color: var(--accent-gold-premium);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+  background: rgba(15, 34, 61, 0.9);
+}
+
+/* Linear Interpolation Animated Compute Action Button Trigger components styling */
+.ai-compute-trigger-btn {
+  background: linear-gradient(135deg, var(--accent-gold-premium) 0%, #b8901c 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 18px;
+  color: var(--primary-navy-deep);
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+  margin-top: 10px;
+}
+
+.ai-compute-trigger-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(212, 175, 55, 0.35);
+  background: linear-gradient(135deg, var(--accent-gold-hover) 0%, var(--accent-gold-premium) 100%);
+}
+
+.ai-compute-trigger-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.ai-compute-trigger-btn:disabled {
+  background: #2a3b50;
+  color: var(--text-muted-gray);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Advanced CSS Processing Loader Spinner Components nodes styling */
+.ai-processing-loader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.spinner-node {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top-color: var(--primary-navy-deep);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Section B: Predictive Quantitative Visualization Fallbacks styling */
+.ai-results-dashboard-panel {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-dashboard-fallback-placeholder {
+  flex: 1;
+  background: rgba(15, 34, 61, 0.4);
+  border: 2px dashed rgba(212, 175, 55, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.placeholder-neural-icon {
+  color: rgba(212, 175, 55, 0.25);
+  margin-bottom: 20px;
+}
+
+.ai-dashboard-fallback-placeholder h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ai-dashboard-fallback-placeholder p {
+  font-size: 14px;
+  color: var(--text-muted-gray);
+  max-width: 380px;
+  line-height: 1.5;
+}
+
+/* Dynamic Active Analytical Output Views Framework panels styling */
+.ai-dashboard-active-output-view {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+/* Premium Primary Quantitative Pricing Output Structural Component Card styling */
+.ai-output-metrics-card {
+  position: relative;
+  background: linear-gradient(145deg, #0f223d 0%, #071324 100%);
+  border: 1px solid var(--glassmorphism-border);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.metric-card-top-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-gold-premium), #fff, var(--accent-gold-premium));
+}
+
+.metric-row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.metric-row-header h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted-gray);
+  font-weight: 700;
+}
+
+.premium-pill {
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--accent-gold-premium);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.valuation-output-numeric-display {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.wrapper-price-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.valuation-output-numeric-display h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.metric-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 24px;
+}
+
+.metric-supplementary-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.supplementary-sub-node {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sub-node-label {
+  font-size: 12px;
+  color: var(--text-muted-gray);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sub-node-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.text-green {
+  color: #10b981;
+}
+
+/* Supplementary System Smart Recommendations Structural Elements Container card styling */
+.ai-recommendations-matrix-card {
+  background: var(--glassmorphism-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glassmorphism-border);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.ai-recommendations-matrix-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 12px;
+}
+
+.recommendation-bullets-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.recommendation-item-node {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.icon-success-node {
+  color: #10b981;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* CSS Keyframe Animation Matrices */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
+}
+
+.fade-in-slide {
+  animation: fadeInSlide 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* High-Fidelity Responsive Media Breakpoint Layout Adjustments */
+@media (max-width: 1024px) {
+  .ai-grid-system {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .ai-feature-layout {
+    margin-top: -20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ai-hero-title {
+    font-size: 2.2rem;
+  }
+  .form-input-row-group,
+  .form-input-row-triple {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .ai-form-card-panel {
+    padding: 24px;
+  }
+  .valuation-output-numeric-display h2 {
+    font-size: 2.2rem;
+  }
+}
